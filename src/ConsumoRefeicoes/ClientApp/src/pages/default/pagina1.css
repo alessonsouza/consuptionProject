@@ -1,0 +1,87 @@
+.pagina1 {
+  font-size: 200%;
+}
+
+.pagina {
+  font-family: 'UnimedSlab-SemiBold';
+  font-size: 200%;
+}
+
+/* .table2 {
+  padding: 20px;
+  text-align: auto;
+  max-width: 100%;
+} */
+
+.badge-success {
+  background-color: #00995d;
+}
+
+.badge-warning {
+  background-color: #ffc20f;
+}
+
+.size120 {
+  max-width: 120px;
+}
+
+.size50 {
+  max-width: 50px;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #ea0f63;
+  border-color: #ea0f63;
+}
+
+.box {
+  width: 80%;
+  height: 80%;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 350px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.MuiButton {
+  color: #fff;
+  background-color: #1c8042;
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #1c8042;
+}
+
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+
+.b-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.cor-preto-unimed {
+  color: black;
+}
+
+.cor-branco-unimed {
+  color: #fff;
+}
+
+.cor-marrom-unimed {
+  color: rgb(102, 60, 0);
+}
+
+.cor-cinza-unimed {
+  color: #a0a0a0;
+}

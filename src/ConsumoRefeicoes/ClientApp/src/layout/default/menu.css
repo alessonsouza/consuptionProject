@@ -1,0 +1,30 @@
+.navbar-light .navbar-nav .nav-item > .nav-link {
+  color: #fff;
+; 
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #000 !important;
+  background-color: #b9d300;
+}
+
+.nav-item > .nav-link:hover,
+.nav-item > .nav-link:focus,
+.show > .nav-link {
+  color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: #c3c9c9 !important;
+}
+
+.color {
+  color: #b9d300;
+  text-align: center;
+  font-size: 12px;
+  margin-right: -40px;
+  margin-top: -30px;
+
+}
+

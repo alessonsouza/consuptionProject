@@ -1,0 +1,134 @@
+/*
+--------------------------------------------------------------------------------
+                                CORES DE FONTE
+--------------------------------------------------------------------------------
+*/
+.cor-verde-unimed {
+  color: #006600;
+}
+.cor-verde-claro {
+  color: #b9d300;
+}
+
+.cor-primaria {
+  color: #00995d;
+}
+
+.cor-bege {
+  color: #e6d3a8;
+}
+.cor-branco {
+  color: #fff;
+}
+.cor-pink {
+  color: #ea0f63;
+}
+.cor-lilas {
+  color: #a0238b;
+}
+.cor-laranja {
+  color: #f5781e;
+}
+.cor-amarelo {
+  color: #ffc20f;
+}
+.cor-cinza-claro {
+  color: #c3c9c9;
+}
+.cor-verde-escuro {
+  color: #005128;
+}
+.cor-roxo {
+  color: #410050;
+}
+.cor-verde-turquesa {
+  color: #006a6a;
+}
+.cor-cinza-escuro {
+  color: #79787d;
+}
+.cor-marron {
+  color: #683c0f;
+}
+
+/*
+--------------------------------------------------------------------------------
+                                CORES DE FUNDO
+--------------------------------------------------------------------------------
+*/
+.bg-verde-primario {
+  background-color: #00995d;
+}
+.bg-verde-unimed {
+  background-color: #006600;
+}
+.bg-verde-claro {
+  background-color: #b9d300;
+}
+.bg-bege {
+  background-color: #e6d3a8;
+}
+.bg-branco {
+  background-color: #fff;
+}
+.bg-pink {
+  background-color: #ea0f63;
+}
+.bg-lilas {
+  background-color: #a0238b;
+}
+.bg-laranja {
+  background-color: #f5781e;
+}
+.bg-amarelo {
+  background-color: #ffc20f;
+}
+.bg-cinza-claro {
+  background-color: #c3c9c9;
+}
+.bg-verde-escuro {
+  background-color: #005128;
+}
+.bg-roxo {
+  background-color: #410050;
+}
+.bg-verde-turquesa {
+  background-color: #006a6a;
+}
+.bg-cinza-escuro {
+  background-color: #79787d;
+}
+.bg-marron {
+  background-color: #683c0f;
+}
+
+/*
+--------------------------------------------------------------------------------
+                                FONTES PADRÃO
+--------------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: UnimedSlab-SemiBold;
+  src: url('https://www.unimedchapeco.coop.br/assets/fonts/Unimed_Slab/UnimedSlab-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('https://www.unimedchapeco.coop.br/assets/fonts/Unimed_Sans/UnimedSans-Regular.otf');
+}
+
+/*
+--------------------------------------------------------------------------------
+                            FORMATAÇÃO PADRÃO
+--------------------------------------------------------------------------------
+*/
+h1,
+h2 {
+  font-family: 'UnimedSlab-SemiBold', 'Trebuchet MS', 'Segoe UI', 'Roboto',
+    'Oxygen' !important;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}

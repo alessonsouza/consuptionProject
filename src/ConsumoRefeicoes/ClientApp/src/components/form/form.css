@@ -1,0 +1,21 @@
+.form-error {
+  border-color: #d61132;
+}
+
+.label-error {
+  color: #d61132;
+}
+
+.invalid-feedback {
+  color: #d61132;
+  display: block;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #005128;
+  box-shadow: none;
+}

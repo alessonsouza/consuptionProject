@@ -1,0 +1,11 @@
+{
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "semi": true,
+  "jsxBracketSameLine": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "endOfLine": "auto"
+}
