@@ -3,7 +3,7 @@
                                 CORES DE FONTE
 --------------------------------------------------------------------------------
 */
-.cor-verde-unimed {
+.cor-verde-consummos {
   color: #006600;
 }
 .cor-verde-claro {
@@ -59,7 +59,7 @@
 .bg-verde-primario {
   background-color: #00995d;
 }
-.bg-verde-unimed {
+.bg-verde-consummos {
   background-color: #006600;
 }
 .bg-verde-claro {
@@ -107,26 +107,6 @@
                                 FONTES PADRÃO
 --------------------------------------------------------------------------------
 */
-@font-face {
-  font-family: UnimedSlab-SemiBold;
-  src: url('https://www.unimedchapeco.coop.br/assets/fonts/Unimed_Slab/UnimedSlab-SemiBold.otf');
-}
-
-@font-face {
-  font-family: 'Unimed Sans';
-  src: url('https://www.unimedchapeco.coop.br/assets/fonts/Unimed_Sans/UnimedSans-Regular.otf');
-}
-
-/*
---------------------------------------------------------------------------------
-                            FORMATAÇÃO PADRÃO
---------------------------------------------------------------------------------
-*/
-h1,
-h2 {
-  font-family: 'UnimedSlab-SemiBold', 'Trebuchet MS', 'Segoe UI', 'Roboto',
-    'Oxygen' !important;
-}
 
 h1 {
   font-size: 1.5em;

@@ -6,9 +6,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Unimed Sans', -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
-    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f3f3 !important;

@@ -2,11 +2,6 @@
   font-size: 200%;
 }
 
-.pagina {
-  font-family: 'UnimedSlab-SemiBold';
-  font-size: 200%;
-}
-
 /* .table2 {
   padding: 20px;
   text-align: auto;
@@ -70,18 +65,18 @@
   cursor: not-allowed !important;
 }
 
-.cor-preto-unimed {
+.cor-preto-termo {
   color: black;
 }
 
-.cor-branco-unimed {
+.cor-branco-termo {
   color: #fff;
 }
 
-.cor-marrom-unimed {
+.cor-marrom-termo {
   color: rgb(102, 60, 0);
 }
 
-.cor-cinza-unimed {
+.cor-cinza-termo {
   color: #a0a0a0;
 }

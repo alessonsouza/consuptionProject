@@ -1,12 +1,9 @@
-Template padrão para ser utilizado em sistemas internos da Unimed Chapecó.
-
 Tecnologias utilizadas:
-  
+
 - React (https://reactjs.org)
-- React router dom  (https://reactrouter.com/web/guides/quick-start)
+- React router dom (https://reactrouter.com/web/guides/quick-start)
 - Formik (https://jaredpalmer.com/formik/)
 - Validação de formulários com Yup (https://jaredpalmer.com/formik/docs/guides/validation)
-
 
 Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app).
 

@@ -26,7 +26,7 @@ import { Box, BoxTitle } from '../../components/box-card';
 import RefeicoesAPI from '../../lib/api/refeicoes';
 import { LoaderContext } from '../../lib/context/loader-context';
 import './pagina1.css';
-import '../../assets/css/unimed.css';
+import '../../assets/css/colors.css';
 
 const Home = () => {
   dayjs.extend(isBetween);
@@ -657,7 +657,7 @@ const Home = () => {
           <td style={{ width: '100%' }}>{items.descricao}</td>
           <td style={{ textAlign: 'right', width: '45%' }}>
             <h5>
-              <span className="cor-marrom-unimed">{items.usU_QTDREF}</span>
+              <span className="cor-marrom-termo">{items.usU_QTDREF}</span>
             </h5>
           </td>
         </tr>
@@ -726,7 +726,7 @@ const Home = () => {
               disabled={!dataEmployee?.matricula}
               type="button"
               className={`btn btn-lg ${corBotaoRefeicao}  btn-block ${
-                !dataEmployee?.matricula ? 'cor-cinza-unimed' : ''
+                !dataEmployee?.matricula ? 'cor-cinza-termo' : ''
               }`}
               style={{
                 height: '95%',

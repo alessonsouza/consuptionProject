@@ -22,11 +22,7 @@ namespace backend.Services
 
         public async Task<IEnumerable<User>> GetSearchUser(int matricula)
         {
-            string sql = @"SELECT fun.nomfun as Name,
-                                   fun.numcad as Matricula,
-                                    fun.SITAFA as Situacao  
-                              FROM r034fun fun
-                             WHERE fun.numcad = :matricula";
+            string sql = @"";
             var param = new DynamicParameters();
             param.Add(":matricula", matricula);
 
@@ -46,12 +42,7 @@ namespace backend.Services
 
         public int GetRegister(int matricula, string data)
         {
-            string sql = @" select count(*) from r070acc
-                                where numemp = 1
-                                and tipcol = 1
-                                and numcad = :matricula
-                                and datacc = :data
-                                and codrlg <> 20"; ;
+            string sql = @" ";
 
             var param = new DynamicParameters();
             param.Add(":matricula", matricula);

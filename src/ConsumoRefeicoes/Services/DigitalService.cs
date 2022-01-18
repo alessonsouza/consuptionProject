@@ -22,13 +22,7 @@ namespace backend.Services
         public async Task<IEnumerable<UserDigital>> Comparar()
         {
             string sql = @"select   
-                                    xap_blob_to_clob(BIO.DESDIG) as DESDIGCONVERT,
-                                    FUN.NUMCAD,
-                                    FUN.NOMFUN,
-                                    BIO.FABBIO,
-                                    BIO.TIPTEM
-                                from R034BIO BIO
-                                JOIN R034FUN FUN ON (FUN.NUMEMP = BIO.NUMEMP AND FUN.TIPCOL = BIO.TIPCOL AND FUN.NUMCAD = BIO.NUMCAD)                                                                          
+                                                                                                             
                                 "; ;
 
             using (var conn = _connection.Connection())
@@ -50,14 +44,7 @@ namespace backend.Services
 
         public IEnumerable<UserDigital> GetAllUsers()
         {
-            string sql = @"select   DESDIG,                                    
-                                    FUN.NUMCAD || BIO.TIPTEM  NUMCAD,
-                                    FUN.NOMFUN,
-                                    BIO.FABBIO,
-                                    BIO.TIPTEM
-                                from R034BIO BIO
-                                JOIN R034FUN FUN ON (FUN.NUMEMP = BIO.NUMEMP AND FUN.TIPCOL = BIO.TIPCOL AND FUN.NUMCAD = BIO.NUMCAD)
-                                where fun.sitafa <> 7                                              
+            string sql = @"select                                                 
                                 "; ;
 
 
@@ -81,13 +68,7 @@ namespace backend.Services
         public async Task<UserDigital> GetUserByNumCad(string numcad)
         {
             string sql = @"select   
-                                    FUN.NUMCAD,
-                                    FUN.NOMFUN,
-                                    BIO.FABBIO,
-                                    BIO.TIPTEM
-                                from R034BIO BIO
-                                JOIN R034FUN FUN ON (FUN.NUMEMP = BIO.NUMEMP AND FUN.TIPCOL = BIO.TIPCOL AND FUN.NUMCAD = BIO.NUMCAD)                                              
-                                WHERE FUN.NUMCAD || BIO.TIPTEM = :numcad                             
+                                                               
                                 "; ;
 
             var param = new DynamicParameters();

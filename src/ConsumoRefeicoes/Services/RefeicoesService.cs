@@ -23,14 +23,7 @@ namespace backend.Services
 
         public async Task<IEnumerable<ShowFoodItems>> GetSearchItem(int codigo)
         {
-            string sql = @" SELECT  distinct trf.Codref as USU_CODREF,
-                                     trf.Desref as Descricao,
-                                     trf.numemp as USU_NUMEMP, 
-                                     acc.tipcol as USU_TIPCOL    
-                                From r068trf  trf
-                                Join r070acc acc ON trf.codref = acc.codref 
-                                 AND trf.numemp = acc.numemp
-                               where Trf.Codref = :codigo
+            string sql = @" 
                             ";
             var param = new DynamicParameters();
             param.Add(":codigo", codigo);
@@ -53,21 +46,7 @@ namespace backend.Services
         {
             var dataFim = CompetenciaHelper.GetEndDate(competencia); //"25/04/2021";
             var dataInicio = CompetenciaHelper.GetStartDate(competencia);
-            string sql = @"select USU_CODREF, count(*)soma, Descricao, USU_NUMEMP, USU_TIPCOL  from
-                                  (select  trf.codref as USU_CODREF,  
-                                        trf.codref as soma,
-                                        trf.Desref as Descricao,
-                                        trf.numemp as  USU_NUMEMP,
-                                        acc.tipcol as USU_TIPCOL                                   
-                                     From r068trf  trf
-                                       left Join r070acc acc
-                                        ON trf.codref = acc.codref 
-                                       AND trf.numemp = acc.numemp 
-                                     WHERE to_char(acc.datapu,'YYYYMMDD HH:mm') >= :dataInicio
-                                     AND TO_CHAR(acc.datapu, 'YYYYMMDD HH:mm') < :dataFim
-                                     AND acc.codrlg    = 20 
-                                     and trf.USU_REFATI = 'S'
-                                  ) GROUP BY USU_CODREF, Descricao, USU_NUMEMP, USU_TIPCOL ORDER BY soma desc";
+            string sql = @"";
 
             var param = new DynamicParameters();
             param.Add(":dataInicio", dataInicio);
@@ -92,14 +71,9 @@ namespace backend.Services
 
         public async Task<IEnumerable<ShowFoodItems>> GetFoodUnusedService(string ids2)
         {
-            string sql2 = @" select  trf.codref as USU_CODREF,  
-                                        1 as soma,
-                                        trf.Desref as Descricao,
-                                        trf.numemp as  USU_NUMEMP,
-                                      1 as USU_TIPCOL                                   
-                                     From r068trf  trf                                    
-                                   where trf.codref not in (" + ids2.Replace("'", "") + @")
-                                   and trf.USU_REFATI = 'S'";
+            string sql2 = @"                                     
+                                  in (" + ids2.Replace("'", "") + @")
+                                   = 'S'";
             using (var conn = _connection.Connection())
             {
                 try
@@ -117,10 +91,7 @@ namespace backend.Services
         }
         public Task<IEnumerable<FoodItems>> GetMealById(int matricula, string data)
         {
-            string sql = @"select *
-                                 from USU_TCONREF
-                                where usu_numcad = :matricula
-                                  and usu_datcon = :data";
+            string sql = @"";
 
             var param = new DynamicParameters();
             param.Add(":matricula", matricula);
@@ -155,8 +126,7 @@ namespace backend.Services
                     {
                         if (item.USU_CODREF < 6)
                         {
-                            sql = @"Insert into USU_TCONREF (USU_NUMEMP, USU_TIPCOL, USU_NUMCAD, USU_DATCON, USU_HORCON, USU_TPCAPT) 
-                                                        values (:USU_NUMEMP, :USU_TIPCOL, :USU_NUMCAD, :USU_DATCON, :USU_HORCON, :USU_TPCAPT)";
+                            sql = @"Insert into ";
                             var obj = new
                             {
                                 USU_NUMEMP = item.USU_NUMEMP,
@@ -170,8 +140,7 @@ namespace backend.Services
                         }
                         else
                         {
-                            sql = @"Insert into USU_TCONFRI (USU_NUMEMP, USU_TIPCOL, USU_NUMCAD, USU_DATCON, USU_HORCON, USU_CODREF, USU_QTDREF, USU_TPCAPT) 
-                                                    values (:USU_NUMEMP, :USU_TIPCOL, :USU_NUMCAD, :USU_DATCON, :USU_HORCON, :USU_CODREF, :USU_QTDREF, :USU_TPCAPT)";
+                            sql = @"Insert into ";
                             var obj = new
                             {
                                 USU_NUMEMP = item.USU_NUMEMP,
