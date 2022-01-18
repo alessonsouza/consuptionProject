@@ -4,7 +4,7 @@ using backend.Models;
 
 namespace backend.Interfaces.Services
 {
-    public interface IUserSenior
+    public interface IUserGeral
     {
         Task<IEnumerable<Users>> GetUsers(string username);
     }

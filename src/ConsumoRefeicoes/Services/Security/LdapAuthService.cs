@@ -17,12 +17,12 @@ namespace backend.Services.Security
         protected readonly DirectoryEntry _ldapConnection;
         protected User _user;
 
-        protected readonly IUserSenior _userSeniorService;
+        protected readonly IUserGeral _userGeralService;
 
-        public LdapAuthService(IOptions<LdapConfig> ldapConfig, IUserSenior userSeniorService)
+        public LdapAuthService(IOptions<LdapConfig> ldapConfig, IUserGeral userGeralService)
         {
             _config = ldapConfig.Value;
-            _userSeniorService = userSeniorService;
+            _userGeralService = userGeralService;
         }
 
         public async Task<User> Autenthicate(string username, string password)
@@ -46,13 +46,14 @@ namespace backend.Services.Security
             DebugProperties(username);
             List<Group> listGroups = GetAllGroups(username);
             bool groupsVerify = VerirfyGroup(listGroups);
-            if (!groupsVerify) {
+            if (!groupsVerify)
+            {
                 throw new ApplicationException("O usuário não tem permissão para acessar este sistema!!!");
             }
 
             string nameOfUser = GetUserFullName(username);
-            var _userSenior = _userSeniorService.GetUsers(username);
-            var matricula = _userSenior.Result.Where(index => index.NumCadastro != 0).Last();
+            var _userGeral = _userGeralService.GetUsers(username);
+            var matricula = _userGeral.Result.Where(index => index.NumCadastro != 0).Last();
 
             _user = new User
             {
@@ -115,11 +116,12 @@ namespace backend.Services.Security
 
         private bool VerirfyGroup(List<Group> groups)
         {
-            List<Group> listGroups = new List<Group>();            
+            List<Group> listGroups = new List<Group>();
 
             foreach (var ldapField in groups)
             {
-                if (ldapField.GroupName == "G_NUTRICAO" || ldapField.GroupName == "G_TI"){
+                if (ldapField.GroupName == "G_NUTRICAO" || ldapField.GroupName == "G_TI")
+                {
                     return true;
                 }
                 // cycle through objects in each field e.g. group membership  

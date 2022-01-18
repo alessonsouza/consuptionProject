@@ -63,7 +63,7 @@ namespace backend
 
 
 
-            services.AddScoped<IUserSenior, UserSeniorService>();
+            services.AddScoped<IUserGeral, UserGeralService>();
             services.AddScoped<IRefeicoes, RefeicoesService>();
             services.AddScoped<ITokenService, TokenService>();
 

@@ -8,11 +8,11 @@ using Dapper;
 
 namespace backend.Services.Security
 {
-    public class UserSeniorService : IUserSenior
+    public class UserGeralService : IUserGeral
     {
         public readonly IConnectionFactory _connection;
 
-        public UserSeniorService(IConnectionFactory conn)
+        public UserGeralService(IConnectionFactory conn)
         {
             _connection = conn;
         }
